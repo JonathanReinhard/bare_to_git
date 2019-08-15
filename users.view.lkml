@@ -77,6 +77,15 @@ view: users {
     drill_fields: [detail*]
   }
 
+  measure: count2 {
+    type: count
+    drill_fields: [detail*]
+    filters: {
+      field: orders.id
+      value: ""
+    }
+  }
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
